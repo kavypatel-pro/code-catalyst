@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Profile - PM Internship Scheme</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for the new questionnaire design */
+        .questionnaire-main {
+            padding-top: 100px;
+        }
+
+        .questionnaire-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .question-panel {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .summary-panel {
+            position: sticky;
+            top: 120px;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .summary-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 1.5rem;
+        }
+
+        .summary-header h3 {
+            font-size: 1.5rem;
+            color: #1F2937;
+        }
+        
+        .progress-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: conic-gradient(#4F46E5 var(--progress), #e5e7eb 0);
+            margin: 1rem auto;
+            transition: all 0.3s;
+        }
+
+        .progress-circle-inner {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #fff;
+            display: grid;
+            place-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #4F46E5;
+        }
+
+        .summary-content .summary-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .summary-content h4 {
+            font-size: 1.1rem;
+            color: #374151;
+            margin-bottom: 0.75rem;
+        }
+
+        .summary-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .summary-tag {
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .question-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .question-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 992px) {
+            .questionnaire-grid {
+                grid-template-columns: 1fr;
+            }
+            .summary-panel {
+                position: static;
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./website logo/Pm internship scheme.png" alt="PM Logo" class="logo-img">
+                    <span class="logo-text">PM Internship Scheme</span>
+                </div>
+                <a href="index.html" class="btn-secondary">Exit Setup</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="questionnaire-main">
+        <div class="container">
+            <div class="questionnaire-grid">
+                <div class="question-panel">
+                    <div class="questionnaire-header" style="text-align: left; margin-bottom: 2rem;">
+                        <h1>Build Your Profile</h1>
+                        <p>Complete your profile to get personalized internship recommendations.</p>
+                    </div>
+
+                    <form id="questionnaireForm">
+                        <div class="question-section" data-question="1">
+                            <div class="question-header" style="text-align: left;">
+                                <h2><i class="fas fa-cogs"></i> Your Skills & Interests</h2>
+                                <p>Select all that apply.</p>
+                            </div>
+                            <div class="skills-grid">
+                                <label class="skill-option"><input type="checkbox" name="skills" value="programming"><div class="skill-card"><i class="fas fa-code"></i><span>Programming</span></div></label>
+                                <label class="skill-option"><input type="checkbox" name="skills" value="data-analysis"><div class="skill-card"><i class="fas fa-chart-line"></i><span>Data Analysis</span></div></label>
+                                <label class="skill-option"><input type="checkbox" name="skills" value="design"><div class="skill-card"><i class="fas fa-palette"></i><span>Design</span></div></label>
+                                <label class="skill-option"><input type="checkbox" name="skills" value="marketing"><div class="skill-card"><i class="fas fa-bullhorn"></i><span>Marketing</span></div></label>
+                                <label class="skill-option"><input type="checkbox" name="skills" value="writing"><div class="skill-card"><i class="fas fa-pen"></i><span>Writing</span></div></label>
+                                <label class="skill-option"><input type="checkbox" name="skills" value="research"><div class="skill-card"><i class="fas fa-search"></i><span>Research</span></div></label>
+                            </div>
+                        </div>
+
+                        <div class="question-section" data-question="2">
+                             <div class="question-header" style="text-align: left;">
+                                <h2><i class="fas fa-building"></i> Preferred Work Environment</h2>
+                                <p>Choose one that suits you best.</p>
+                            </div>
+                            <div class="option-grid">
+                                <label class="option-card"><input type="radio" name="work-environment" value="remote"><div class="option-content"><i class="fas fa-home"></i><h3>Remote</h3><p>Work from anywhere.</p></div></label>
+                                <label class="option-card"><input type="radio" name="work-environment" value="office"><div class="option-content"><i class="fas fa-building"></i><h3>In-Office</h3><p>A traditional office setup.</p></div></label>
+                                <label class="option-card"><input type="radio" name="work-environment" value="hybrid"><div class="option-content"><i class="fas fa-balance-scale"></i><h3>Hybrid</h3><p>A mix of both.</p></div></label>
+                            </div>
+                        </div>
+
+                        <div class="question-section" data-question="3">
+                            <div class="question-header" style="text-align: left;">
+                                <h2><i class="fas fa-briefcase"></i> Your Experience Level</h2>
+                                <p>This helps us find the right opportunities.</p>
+                            </div>
+                            <div class="experience-options">
+                                <label class="experience-option"><input type="radio" name="experience" value="beginner"><div class="experience-card"><i class="fas fa-seedling"></i><h3>Beginner</h3><p>Just starting out.</p></div></label>
+                                <label class="experience-option"><input type="radio" name="experience" value="intermediate"><div class="experience-card"><i class="fas fa-leaf"></i><h3>Intermediate</h3><p>Have some experience.</p></div></label>
+                                <label class="experience-option"><input type="radio" name="experience" value="advanced"><div class="experience-card"><i class="fas fa-tree"></i><h3>Advanced</h3><p>Ready to lead.</p></div></label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary" id="submitBtn" style="width: 100%; padding: 1rem; font-size: 1.2rem;">
+                            <i class="fas fa-magic"></i> Get My Recommendations
+                        </button>
+                    </form>
+                </div>
+
+                <div class="summary-panel">
+                    <div class="summary-header">
+                        <div class="progress-circle" style="--progress: 0deg;">
+                            <div class="progress-circle-inner">0%</div>
+                        </div>
+                        <h3>Your Profile</h3>
+                    </div>
+                    <div class="summary-content">
+                        <div class="summary-item" id="summary-skills">
+                            <h4><i class="fas fa-cogs"></i> Skills</h4>
+                            <div class="summary-tags">
+                                <span class="summary-tag-placeholder">Select your skills...</span>
+                            </div>
+                        </div>
+                        <div class="summary-item" id="summary-environment">
+                            <h4><i class="fas fa-building"></i> Environment</h4>
+                            <div class="summary-tags">
+                                <span class="summary-tag-placeholder">Choose an environment...</span>
+                            </div>
+                        </div>
+                        <div class="summary-item" id="summary-experience">
+                            <h4><i class="fas fa-briefcase"></i> Experience</h4>
+                            <div class="summary-tags">
+                                <span class="summary-tag-placeholder">Select your experience...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // JavaScript for the new interactive questionnaire
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('questionnaireForm');
+            const inputs = form.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+            const totalQuestions = document.querySelectorAll('.question-section').length;
+            
+            const summaryMappings = {
+                skills: document.querySelector('#summary-skills .summary-tags'),
+                'work-environment': document.querySelector('#summary-environment .summary-tags'),
+                experience: document.querySelector('#summary-experience .summary-tags')
+            };
+
+            const updateSummary = () => {
+                let completedQuestions = 0;
+
+                // Update for each question type
+                Object.keys(summaryMappings).forEach(name => {
+                    const container = summaryMappings[name];
+                    container.innerHTML = ''; // Clear current tags
+                    const checkedInputs = form.querySelectorAll(`input[name="${name}"]:checked`);
+
+                    if (checkedInputs.length > 0) {
+                        completedQuestions++;
+                        checkedInputs.forEach(input => {
+                            const tag = document.createElement('span');
+                            tag.className = 'summary-tag';
+                            tag.textContent = input.value;
+                            container.appendChild(tag);
+                        });
+                    } else {
+                        const placeholder = document.createElement('span');
+                        placeholder.className = 'summary-tag-placeholder';
+                        container.appendChild(placeholder);
+                    }
+                });
+                
+                // Update progress circle
+                const progressPercentage = Math.round((completedQuestions / totalQuestions) * 100);
+                const progressCircle = document.querySelector('.progress-circle');
+                const progressText = document.querySelector('.progress-circle-inner');
+                
+                progressCircle.style.setProperty('--progress', `${progressPercentage * 3.6}deg`);
+                progressText.textContent = `${progressPercentage}%`;
+            };
+
+            inputs.forEach(input => {
+                input.addEventListener('change', () => {
+                    // Visual feedback for selection
+                    const card = input.closest('.skill-option, .option-card, .experience-option');
+                    if (input.type === 'radio') {
+                        card.parentElement.querySelectorAll('.selected').forEach(el => el.classList.remove('selected'));
+                    }
+                    if (input.checked) {
+                        card.classList.add('selected');
+                    } else {
+                        card.classList.remove('selected');
+                    }
+                    updateSummary();
+                });
+            });
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Logic from original questionnaire.js to save to localStorage and redirect
+                const formData = new FormData(this);
+                const userProfile = {};
+                for (let [key, value] of formData.entries()) {
+                    if (userProfile[key]) {
+                        if (Array.isArray(userProfile[key])) userProfile[key].push(value);
+                        else userProfile[key] = [userProfile[key], value];
+                    } else {
+                        userProfile[key] = value;
+                    }
+                }
+                localStorage.setItem('userProfile', JSON.stringify(userProfile));
+
+                // Show loading and redirect
+                const submitBtn = document.getElementById('submitBtn');
+                submitBtn.innerHTML = '<span class="loading"></span> Analyzing Profile...';
+                submitBtn.disabled = true;
+                setTimeout(() => {
+                    window.location.href = 'recommendations.html';
+                }, 2000);
+            });
+
+            // Initial call to set up summary placeholders
+            updateSummary();
+        });
+    </script>
+</body>
+</html>

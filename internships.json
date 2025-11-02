@@ -1,0 +1,94 @@
+[
+    {
+        "id": 1,
+        "title": "Software Development Intern",
+        "company": "TechCorp Solutions",
+        "location": "Bangalore, Karnataka",
+        "skills": ["JavaScript", "React", "Node.js"],
+        "experienceLevel": "intermediate",
+        "sector": "technology"
+    },
+    {
+        "id": 2,
+        "title": "Data Analytics Intern",
+        "company": "FinanceFirst Ltd",
+        "location": "Mumbai, Maharashtra",
+        "skills": ["Excel", "SQL", "Python"],
+        "experienceLevel": "beginner",
+        "sector": "business"
+    },
+    {
+        "id": 3,
+        "title": "Digital Marketing Intern",
+        "company": "BrandBoost Agency",
+        "location": "Chennai, Tamil Nadu",
+        "skills": ["Social Media", "SEO", "Content Creation"],
+        "experienceLevel": "beginner",
+        "sector": "marketing"
+    },
+    {
+        "id": 4,
+        "title": "AI/ML Research Intern",
+        "company": "InnovateAI Labs",
+        "location": "Hyderabad, Telangana",
+        "skills": ["Python", "TensorFlow", "PyTorch", "research"],
+        "experienceLevel": "advanced",
+        "sector": "technology"
+    },
+    {
+        "id": 5,
+        "title": "Business Development Intern",
+        "company": "Growth Partners Inc.",
+        "location": "Delhi, Delhi",
+        "skills": ["Communication", "Sales", "Marketing"],
+        "experienceLevel": "intermediate",
+        "sector": "business"
+    },
+    {
+        "id": 6,
+        "title": "Graphic Design Intern",
+        "company": "Creative Canvas",
+        "location": "Pune, Maharashtra",
+        "skills": ["Adobe Photoshop", "Illustrator", "Design"],
+        "experienceLevel": "intermediate",
+        "sector": "design"
+    },
+    {
+        "id": 7,
+        "title": "Content Writing Intern",
+        "company": "WordWeavers",
+        "location": "Kolkata, West Bengal",
+        "skills": ["Writing", "Editing", "SEO"],
+        "experienceLevel": "beginner",
+        "sector": "writing"
+    },
+    {
+        "id": 8,
+        "title": "Human Resources Intern",
+        "company": "PeopleFirst Corp",
+        "location": "Ahmedabad, Gujarat",
+        "skills": ["Recruiting", "HR Policies", "Communication"],
+        "experienceLevel": "beginner",
+        "sector": "business"
+    },
+    {
+        "id": 9,
+        "title": "Cybersecurity Intern",
+        "company": "SecureNet",
+        "location": "Bangalore, Karnataka",
+        "skills": ["Networking", "Security", "Python"],
+        "experienceLevel": "advanced",
+        "sector": "technology"
+    },
+    {
+        "id": 10,
+        "title": "Healthcare Management Intern",
+        "company": "Apollo Hospitals",
+        "location": "Chennai, Tamil Nadu",
+        "skills": ["Management", "Healthcare", "Operations"],
+        "experienceLevel": "intermediate",
+        "sector": "healthcare"
+    }
+
+    
+]

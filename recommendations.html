@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personalized Recommendations - PM Internship Scheme</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./website logo/Pm internship scheme.png" alt="PM Logo" class="logo-img">
+                    <span class="logo-text">PM Internship Scheme</span>
+                </div>
+                <div class="progress-indicator">
+                    <div class="progress-step completed" data-step="1">
+                        <div class="step-number">✓</div>
+                        <span>Profile Setup</span>
+                    </div>
+                    <div class="progress-step completed" data-step="2">
+                        <div class="step-number">✓</div>
+                        <span>AI Matching</span>
+                    </div>
+                    <div class="progress-step active" data-step="3">
+                        <div class="step-number">3</div>
+                        <span>Recommendations</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="recommendations-main">
+        <div class="container">
+            <!-- AI Analysis Section -->
+            <section class="ai-analysis">
+                <div class="analysis-header">
+                    <div class="ai-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="analysis-content">
+                        <h1>Your AI-Powered Recommendations</h1>
+                        <p>Based on your profile, we've analyzed <span class="highlight">500+</span> internship opportunities and found the perfect matches for you.</p>
+                    </div>
+                </div>
+                <div class="analysis-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" id="matchScore">95%</div>
+                        <div class="stat-label">Match Score</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="opportunitiesAnalyzed">500+</div>
+                        <div class="stat-label">Opportunities Analyzed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="recommendationsCount">5</div>
+                        <div class="stat-label">Perfect Matches</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- User Profile Summary -->
+            <section class="profile-summary">
+                <h2>Your Profile Summary</h2>
+                <div class="profile-cards">
+                    <div class="profile-card">
+                        <h3>Skills & Interests</h3>
+                        <div class="profile-tags" id="skillsTags">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <h3>Work Preferences</h3>
+                        <div class="profile-tags" id="preferencesTags">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <h3>Career Goals</h3>
+                        <div class="profile-tags" id="goalsTags">
+                            <!-- Dynamically populated -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommendations Section -->
+            <section class="recommendations-section">
+                <div class="section-header">
+                    <h2>Your Personalized Internship Recommendations</h2>
+                    <p>These opportunities are specifically matched to your profile and preferences</p>
+                </div>
+
+                <div class="recommendations-grid" id="recommendationsGrid">
+                    <!-- Recommendations will be dynamically populated -->
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <section class="action-section">
+                <div class="action-buttons">
+                    <button class="btn-secondary" onclick="retakeQuestionnaire()">
+                        <i class="fas fa-redo"></i>
+                        Retake Questionnaire
+                    </button>
+                    <button class="btn-primary" onclick="viewAllInternships()">
+                        <i class="fas fa-search"></i>
+                        Browse All Internships
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./website logo/Pm internship scheme.png" alt="PM Logo" class="logo-img">
+                        <span class="logo-text">PM Internship Scheme</span>
+                    </div>
+                    <p class="footer-description">
+                        Empowering youth across India with AI-powered internship recommendations.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#internships">Internships</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 PM Internship Scheme. All rights reserved.</p>
+                    <p>Ministry of Corporate Affairs, Government of India</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="recommendations.js"></script>
+</body>
+</html>

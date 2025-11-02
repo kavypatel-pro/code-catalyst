@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Internship Scheme - AI Recommendation Engine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./website logo/Pm internship scheme.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./website logo/Pm internship scheme.png" alt="PM Logo" class="logo-img">
+                    <span class="logo-text">PM Internship Scheme</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="goToQuestionnaire()">Find Internships</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn-login" onclick="openLoginModal()">Login</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn-register" onclick="openRegisterModal()">Register</button>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Find Your Perfect Internship with 
+                        <span class="highlight">AI-Powered Recommendations</span>
+                    </h1>
+                    <p class="hero-description">
+                        Get personalized internship suggestions based on your skills, interests, and location. 
+                        Designed for students from all backgrounds across India.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="goToQuestionnaire()">
+                            <i class="fas fa-rocket"></i>
+                            Find Your Perfect Internship
+                        </button>
+                        <button class="btn-secondary" onclick="scrollToFeatures()">
+                            <i class="fas fa-play"></i>
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-card">
+                        <div class="card-header">
+                            <div class="card-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="card-info">
+                                <h4>Student Profile</h4>
+                                <p>Computer Science, Delhi</p>
+                            </div>
+                        </div>
+                        <div class="recommendations">
+                            <h5>Recommended Internships</h5>
+                            <div class="rec-item">
+                                <i class="fas fa-code"></i>
+                                <span>Software Development Intern</span>
+                            </div>
+                            <div class="rec-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Data Analytics Intern</span>
+                            </div>
+                            <div class="rec-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Contact us</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose Our AI Recommendation Engine?</h2>
+                    <p>Simple, smart, and designed for every student across India</p>
+                    <div class="section-cta">
+                        <button class="btn-primary" onclick="goToQuestionnaire()">
+                            <i class="fas fa-magic"></i>
+                            Get Started Now
+                        </button>
+                    </div>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI-Powered Matching</h3>
+                        <p>Our intelligent system analyzes your profile to suggest the most relevant internships from hundreds of opportunities.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile-Friendly</h3>
+                        <p>Access the platform from any device. Optimized for smartphones to reach students in rural and remote areas.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h3>Multi-Language Support</h3>
+                        <p>Available in multiple Indian languages to ensure accessibility for students from diverse backgrounds.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Location-Based</h3>
+                        <p>Find internships near you or in your preferred locations across India.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>All Education Levels</h3>
+                        <p>From first-generation learners to experienced students, we cater to all academic backgrounds.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure & Reliable</h3>
+                        <p>Your data is safe with us. Simple registration process with secure authentication.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2>How It Works</h2>
+                    <p>Get your personalized internship recommendations in just 3 simple steps</p>
+                    <div class="section-cta">
+                        <button class="btn-primary" onclick="goToQuestionnaire()">
+                            <i class="fas fa-play"></i>
+                            Start Your Journey
+                        </button>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Create Your Profile</h3>
+                            <p>Tell us about your education, skills, interests, and location preferences.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>AI Analysis</h3>
+                            <p>Our system analyzes your profile against hundreds of internship opportunities.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Get Recommendations</h3>
+                            <p>Receive 3-5 personalized internship suggestions that match your profile.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Internship Opportunities</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Students Registered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">25+</div>
+                        <div class="stat-label">States Covered</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                </div>
+                <div class="stats-cta">
+                    <button class="btn-secondary" onclick="goToQuestionnaire()">
+                        <i class="fas fa-rocket"></i>
+                        Join Thousands of Students
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About PM Internship Scheme</h2>
+                    <p>Empowering India's youth through technology and opportunity</p>
+                    <div class="section-cta">
+                        <button class="btn-primary" onclick="goToQuestionnaire()">
+                            <i class="fas fa-user-plus"></i>
+                            Start Your Profile
+                        </button>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Our Mission</h3>
+                        <p>The PM Internship Scheme is a flagship initiative by the Ministry of Corporate Affairs, Government of India, designed to bridge the gap between academic learning and practical industry experience. Our AI-powered recommendation engine ensures that every student, regardless of their background or location, can find the perfect internship opportunity.</p>
+                        
+                        <h3>Why We Built This</h3>
+                        <p>With hundreds of internship opportunities available across India, students often struggle to find the right match for their skills and interests. Our intelligent system analyzes student profiles, academic backgrounds, and career aspirations to provide personalized recommendations, making the internship search process simple and effective.</p>
+                        
+                        <h3>Our Commitment</h3>
+                        <p>We are committed to making quality internship opportunities accessible to students from rural areas, tribal districts, urban slums, and remote colleges. Our platform is designed with simplicity in mind, ensuring that first-generation learners and students with limited digital exposure can easily navigate and benefit from our services.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Inclusive Design</h4>
+                            <p>Built for students from all backgrounds and education levels</p>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h4>Pan-India Reach</h4>
+                            <p>Connecting opportunities across all states and union territories</p>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4>Industry Partnerships</h4>
+                            <p>Collaborating with leading organizations and startups</p>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Success Tracking</h4>
+                            <p>Monitoring and improving placement success rates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions? We're here to help you succeed</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3>Email Us</h3>
+                            <p>support@pminternship.gov.in</p>
+                            <p>info@pminternship.gov.in</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3>Call Us</h3>
+                            <p>+91-11-2345-6789</p>
+                            <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>Visit Us</h3>
+                            <p>Ministry of Corporate Affairs</p>
+                            <p>New Delhi, India - 110001</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Response Time</h3>
+                            <p>Email: Within 24 hours</p>
+                            <p>Phone: Immediate assistance</p>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <form class="contact-form" onsubmit="handleContactForm(event)">
+                            <h3>Send us a Message</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactName">Full Name</label>
+                                    <input type="text" id="contactName" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactEmail">Email Address</label>
+                                    <input type="email" id="contactEmail" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactPhone">Phone Number</label>
+                                    <input type="tel" id="contactPhone" name="phone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactSubject">Subject</label>
+                                    <select id="contactSubject" name="subject" required>
+                                        <option value="">Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="technical">Technical Support</option>
+                                        <option value="internship">Internship Related</option>
+                                        <option value="account">Account Issues</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Message</label>
+                                <textarea id="contactMessage" name="message" rows="5" required placeholder="Tell us how we can help you..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="faq-section">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>How does the AI recommendation system work?</h4>
+                            <p>Our AI analyzes your profile, education, skills, interests, and location preferences to match you with the most suitable internship opportunities from our database.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Is registration free?</h4>
+                            <p>Yes, registration and using our platform is completely free for all students across India.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Can I apply for multiple internships?</h4>
+                            <p>Absolutely! You can apply for as many internships as you want. We recommend focusing on the ones that best match your profile.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>What if I'm from a rural area with limited internet?</h4>
+                            <p>Our platform is optimized for low-bandwidth connections and works well on basic smartphones. We also provide offline support through our helpline.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./website logo/Pm internship scheme.png" alt="PM Logo" class="logo-img">
+                        <span class="logo-text">PM Internship Scheme</span>
+                    </div>
+                    <p class="footer-description">
+                        Empowering youth across India with AI-powered internship recommendations. 
+                        Bridging the gap between students and opportunities.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#" onclick="goToQuestionnaire()">Find Internships</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@pminternship.gov.in</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91-11-2345-6789</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>New Delhi, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 PM Internship Scheme. All rights reserved.</p>
+                    <p>Ministry of Corporate Affairs, Government of India</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Login to Your Account</h2>
+                <span class="close" onclick="closeLoginModal()">&times;</span>
+            </div>
+            <form class="login-form" onsubmit="handleLogin(event)" action="connect.php" method="POST">
+                <div class="form-group">
+                    <label for="loginEmail">Email </label>
+                    <input type="email" id="loginEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="remember" value="true">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn-submit">Login</button>
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="#" onclick="switchToRegister()">Register here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create Your Account</h2>
+                <span class="close" onclick="closeRegisterModal()">&times;</span>
+            </div>
+            <form class="register-form" onsubmit="handleRegister(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email Address</label>
+                    <input type="email" id="registerEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="education">Education Level</label>
+                    <select id="education" name="education" required>
+                        <option value="">Select Education Level</option>
+                        <option value="high-school">High School</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                        <option value="master">Master's Degree</option>
+                        <option value="phd">PhD</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <select id="location" name="location" required>
+                        <option value="">Select State</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="mumbai">Maharashtra</option>
+                        <option value="bangalore">Karnataka</option>
+                        <option value="chennai">Tamil Nadu</option>
+                        <option value="kolkata">West Bengal</option>
+                        <option value="hyderabad">Telangana</option>
+                        <option value="pune">Pune</option>
+                        <option value="ahmedabad">Gujarat</option>
+                        <option value="jaipur">Rajasthan</option>
+                        <option value="lucknow">Uttar Pradesh</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="interests">Areas of Interest (Select up to 3)</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="technology">
+                            <span class="checkmark"></span>
+                            Technology
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="business">
+                            <span class="checkmark"></span>
+                            Business
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="healthcare">
+                            <span class="checkmark"></span>
+                            Healthcare
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="education">
+                            <span class="checkmark"></span>
+                            Education
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="finance">
+                            <span class="checkmark"></span>
+                            Finance
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="interests" value="marketing">
+                            <span class="checkmark"></span>
+                            Marketing
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="terms" required>
+                        <span class="checkmark"></span>
+                        I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+                <button type="submit" class="btn-submit">Create Account</button>
+                <div class="form-footer">
+                    <p>Already have an account? <a href="#" onclick="switchToLogin()">Login here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="utils.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
